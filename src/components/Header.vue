@@ -12,13 +12,19 @@
         Programação
         <img src="../assets/icons/arrow_right_blue.svg" alt="Seta apontando para direita" />
       </button>
+      <EventList class="event-list--mobile"></EventList>
     </div>
   </div>
 </template>
 
 <script>
+import EventList from './EventList.vue';
+
 export default {
   name: 'Header',
+  components: {
+    EventList,
+  },
   props: {},
 };
 </script>
@@ -34,11 +40,25 @@ export default {
   display: flex;
   align-items: center;
   padding-left: 50px;
+
+  @media screen and (max-width: 780px) {
+    height: unset;
+    overflow: auto;
+    width: 100%;
+    padding: 30px 10px 10px 10px;
+    align-items: unset;
+  }
 }
 
 .header__content {
   text-align: left;
   white-space: nowrap;
+
+  @media screen and (max-width: 780px) {
+    width: 100%;
+    white-space: unset;
+    text-align: center;
+  }
 }
 
 h1 {
@@ -51,10 +71,16 @@ h1 {
     font-weight: 300;
     color: #4A90E2;
   }
+
+  @media screen and (max-width: 780px) {
+    font-size: 25px;
+  }
 }
 
 p {
   font-size: 25px;
+
+  @media screen and (max-width: 780px) { font-size: 20px; }
 }
 
 button {
@@ -74,6 +100,24 @@ button {
   img {
     margin-left: 10px;
     width: 15px;
+  }
+
+  @media screen and (max-width: 780px) {
+    margin: 0 auto;
+    height: 35px;
+    font-size: 18px;
+
+    img {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.event-list--mobile {
+  display: none;
+
+  @media screen and (max-width: 780px) {
+    display: grid;
   }
 }
 

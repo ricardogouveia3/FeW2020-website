@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <Header></Header>
-    <EventList></EventList>
+    <Events></Events>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
-import EventList from './components/EventList.vue';
+import Events from './components/Events.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    EventList,
+    Events,
   },
 };
 </script>

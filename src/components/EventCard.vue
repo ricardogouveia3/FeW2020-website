@@ -42,7 +42,6 @@ a { text-decoration: none; }
   background-color: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   padding: 30px;
-  margin: 15px 0;
 }
 
 ul, li {
