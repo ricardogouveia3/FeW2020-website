@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header></Header>
+    <EventList></EventList>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Header from './components/Header.vue';
+import EventList from './components/EventList.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Header,
+    EventList,
   },
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgba(4, 33, 73, 0.7) 100%, rgba(4, 33, 73, 0.5) 100%),
+    url("./assets/main-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  background-position: center left;
 }
 </style>
